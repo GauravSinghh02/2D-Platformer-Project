@@ -1,11 +1,9 @@
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
-
-
 {
-    public float distance = 3f;   // how far to move left/right
-    public float speed = 2f;      // movement speed
+    public float distance = 3f; // how far to move left/right
+    public float speed = 2f; // movement speed
 
     private Vector3 startPos;
     private int direction = 1;
@@ -42,8 +40,11 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // detach player when leaving
-            collision.transform.SetParent(null);
+            if (gameObject.activeInHierarchy)
+            {
+                // detach player when leaving
+                collision.transform.SetParent(null);
+            }
         }
     }
 }
