@@ -37,12 +37,13 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // --- Jump ---
-        // If player is grounded AND the Jump button (Spacebar by default) is pressed:
-        if (isGrounded && Input.GetButtonDown("Jump"))
-        {
-            // Set vertical velocity to jumpForce (launch upward).
-            // Horizontal velocity stays the same.
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
+        /* // If player is grounded AND the Jump button (Spacebar by default) is pressed:
+         if (isGrounded && Input.GetButtonDown("Jump"))
+         {
+             // Set vertical velocity to jumpForce (launch upward).
+             // Horizontal velocity stays the same.
+             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+         }
+         */
     }
 }

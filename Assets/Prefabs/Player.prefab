@@ -181,6 +181,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 4
+  jumpForce: 8
+  groundCheck: {fileID: 2485617312783639597}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &-1508271410763496769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +230,7 @@ Transform:
   m_GameObject: {fileID: 2376282286257274718}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.002, y: -0.0828, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.0828, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
