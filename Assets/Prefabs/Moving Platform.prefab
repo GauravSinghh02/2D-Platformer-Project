@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3744478031435780422}
   - component: {fileID: 135547567205834986}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Platforms_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -872662054, guid: 96d4ce01fc064469385bf9cd99fd7718, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94716984, g: 0.39137772, b: 0.39137772, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8836092732636525037}
   - component: {fileID: 1669881706416970196}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Platforms_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -872662054, guid: 96d4ce01fc064469385bf9cd99fd7718, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94716984, g: 0.39137772, b: 0.39137772, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2783829150153220563}
   - component: {fileID: 5218267374548380006}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Platforms_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2046655978, guid: 96d4ce01fc064469385bf9cd99fd7718, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94716984, g: 0.39137772, b: 0.39137772, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -280,8 +280,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1613071418056689954}
   - component: {fileID: 7991144887384454359}
-  m_Layer: 3
-  m_Name: Platform
+  - component: {fileID: -1662320487803259531}
+  m_Layer: 0
+  m_Name: Moving Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,6 +353,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.59, y: 0.15}
   m_EdgeRadius: 0
+--- !u!114 &-1662320487803259531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395715676512470505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb72760205b2fe4cb0648381b421aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  distance: 3
+  speed: 2
 --- !u!1 &9074294220254634573
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8220114907022108635}
   - component: {fileID: 4208426520212923028}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Platforms_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +447,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1700049346, guid: 96d4ce01fc064469385bf9cd99fd7718, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94716984, g: 0.39137772, b: 0.39137772, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
