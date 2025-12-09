@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1151159021, guid: 8b06b9eb9d54443fabaace201490e13c, type: 3}
+  m_Sprite: {fileID: -789249866, guid: 8b06b9eb9d54443fabaace201490e13c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8803ed343927415085e44c7cbd2e49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  coinClip: {fileID: 0}
+  coinsToGive: 2
 --- !u!61 &4656929851249186889
 BoxCollider2D:
   m_ObjectHideFlags: 0

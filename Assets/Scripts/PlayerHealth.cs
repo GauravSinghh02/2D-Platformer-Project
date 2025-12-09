@@ -30,6 +30,8 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(BlinkRed()); // briefly flash red
         UpdateHealthBar();
 
+        SoundManager.Instance.PlaySFX("HURT");
+
         // If health reaches zero or below, call Die()
         if (health <= 0)
         {
@@ -57,6 +59,6 @@ public class PlayerHealth : MonoBehaviour
     // Reload the scene when the Player dies
     private void Die()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
