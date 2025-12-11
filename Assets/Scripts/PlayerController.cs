@@ -5,21 +5,21 @@ public class PlayerController : MonoBehaviour
     public int coin;
 
     // --- Movement & Animation ---
-    private Animator animator;             // Reference to Animator for controlling animations
-    public float moveSpeed = 4f;           // How fast the player moves left/right
+    private Animator animator; // Reference to Animator for controlling animations
+    public float moveSpeed = 4f; // How fast the player moves left/right
 
     // --- Jump variables ---
-    public float jumpForce = 8f;           // Base jump force (vertical speed)
-    public int extraJumpsValue = 1;        // How many extra jumps allowed (1 = double jump, 2 = triple jump)
-    private int extraJumps;                // Counter for jumps left
+    public float jumpForce = 8f; // Base jump force (vertical speed)
+    public int extraJumpsValue = 1; // How many extra jumps allowed (1 = double jump, 2 = triple jump)
+    private int extraJumps; // Counter for jumps left
 
-    public Transform groundCheck;          // Empty child object placed at the player's feet
+    public Transform groundCheck; // Empty child object placed at the player's feet
     public float groundCheckRadius = 0.2f; // Size of the circle used to detect ground
-    public LayerMask groundLayer;          // Which layer counts as "ground" (set in Inspector)
+    public LayerMask groundLayer; // Which layer counts as "ground" (set in Inspector)
 
     // --- Internal state ---
-    private Rigidbody2D rb;                // Reference to the Rigidbody2D component
-    private bool isGrounded;               // True if player is standing on ground
+    private Rigidbody2D rb; // Reference to the Rigidbody2D component
+    private bool isGrounded; // True if player is standing on ground
 
     void Start()
     {
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                animator.Play("Player_Run");  // Run animation when moving
+                animator.Play("Player_Run"); // Run animation when moving
             }
         }
         else
@@ -106,10 +106,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("BouncePad"))
         {
-            
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
 
             SoundManager.Instance.PlaySFX("SQUASH");
+        }
+
+        if (collision.gameObject.tag == "Apple")
+        {
+            extraJumps = 3;
+            SoundManager.Instance.PlaySFX("COIN");
+            Destroy(collision.gameObject);
         }
     }
 }

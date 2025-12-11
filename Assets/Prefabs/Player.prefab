@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3591005866865274858}
   - component: {fileID: 4528575170502349269}
   - component: {fileID: 3736244567507814728}
+  - component: {fileID: 2307555891916020974}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -181,9 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f929e60c0e624e348ce08bb98059c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 4
   coin: 0
+  moveSpeed: 4
   jumpForce: 8
+  extraJumpsValue: 1
   groundCheck: {fileID: 2485617312783639597}
   groundCheckRadius: 0.2
   groundLayer:
@@ -226,6 +228,21 @@ MonoBehaviour:
   health: 100
   healthImage: {fileID: 0}
   damageAmount: 25
+--- !u!114 &2307555891916020974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428622681065618705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a368728b6814d68bdec4206378e041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostAbility
+  duration: 2
+  cooldown: 5
+  ghostAlpha: 0.5
 --- !u!1 &2376282286257274718
 GameObject:
   m_ObjectHideFlags: 0
