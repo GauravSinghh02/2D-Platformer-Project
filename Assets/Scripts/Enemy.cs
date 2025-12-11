@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 2f;          // horizontal speed
-    public float moveDistance = 1f;   // patrol distance from start position
+    public float speed = 2f; // horizontal speed
+    public float moveDistance = 1f; // patrol distance from start position
 
     private Rigidbody2D rb;
     private float leftBoundary;
     private float rightBoundary;
-    private int direction = 1;        // 1 = right, -1 = left
+    private int direction = 1; // 1 = right, -1 = left
 
     void Start()
     {

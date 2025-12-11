@@ -1,11 +1,11 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class NamedAudioClip
 {
-    public string key;        // Identifier string (e.g. "JUMP", "HURT", "COIN")
-    public AudioClip clip;    // Actual audio file, assigned in the Inspector
+    public string key; // Identifier string (e.g. "JUMP", "HURT", "COIN")
+    public AudioClip clip; // Actual audio file, assigned in the Inspector
 }
 
 public class SoundManager : MonoBehaviour
@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     // Singleton instance so other scripts can call SoundManager.Instance.PlaySFX(...)
     public static SoundManager Instance { get; private set; }
 
-    private AudioSource audioSource;   // Single AudioSource used to play all sound effects
+    private AudioSource audioSource; // Single AudioSource used to play all sound effects
 
     // List of clips you can assign in the Inspector (key + clip pairs)
     public List<NamedAudioClip> audioClips;

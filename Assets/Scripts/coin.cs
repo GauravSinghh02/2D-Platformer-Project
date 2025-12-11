@@ -1,6 +1,6 @@
-using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
@@ -12,10 +12,9 @@ public class Coin : MonoBehaviour
     {
         coinText = GameObject.FindWithTag("coinText").GetComponent<TextMeshProUGUI>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
         // 1. Check if the object that touched us is the Player
         if (collision.gameObject.CompareTag("Player"))
         {
