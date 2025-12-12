@@ -14,10 +14,10 @@ public class MovingPlatform : MonoBehaviour
         startPos = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // move platform along X axis
-        transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
+        float movement = direction * speed * Time.fixedDeltaTime;
+        transform.Translate(Vector3.right * movement);
 
         // check distance from start
         if (Mathf.Abs(transform.position.x - startPos.x) >= distance)
